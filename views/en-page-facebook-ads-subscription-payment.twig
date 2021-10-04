@@ -1,0 +1,34 @@
+{% extends "en-base.twig" %}
+
+{% block content %}
+
+
+    <section class="banner">
+        <h2 class="text-center">Facebook Advertising Subscription Payment $1500/month</h2>
+    </section>
+    <section class="container mx-auto py-5">
+        <div class="text-center w-50 mx-auto" id="paypal-button-container-P-3PV39285S3289574GMFGBTQY"></div>
+<script src=https://www.paypal.com/sdk/js?client-id=AWQsFvh8a_0xVkXNku9bOp2zuTDm4I0Mzn9tHcq5RixVB3r0IIQFcSykGz2UDxfTPotdySy8B_4ef3Rx&vault=true&intent=subscription data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-3PV39285S3289574GMFGBTQY'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert('Thank you very much. Your payment has been made successfully.'); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-3PV39285S3289574GMFGBTQY'); // Renders the PayPal button
+</script>
+ 
+    </section>
+
+{% endblock %}
