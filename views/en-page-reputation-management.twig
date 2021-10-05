@@ -198,7 +198,9 @@
 
 {% include "partials/en-section-services-other.twig" %}
 
-<section class="section-paragraph section-faqs">
+{% include "partials/en-section-free-session.twig" %}
+
+<section class="section-paragraph section-faqs pb-5">
     <div class="container">
         <h2 class="section-title">Reputation Management FAQ's</h2>
         <div itemscope itemtype="https://schema.org/FAQPage" class="row">
@@ -279,8 +281,6 @@
         </div>
     </div>
 </section>
-
-{% include "partials/en-section-free-session.twig" %}
 
 {% include "partials/en-form-popup.twig" with {'form_page': 'Reputation Repair (Pop-up Form)'} %}
 

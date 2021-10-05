@@ -248,7 +248,9 @@
         </div>
     </section>
 
-<section class="section-paragraph section-faqs">
+{% include "partials/en-section-free-session.twig" %}
+
+<section class="section-paragraph section-faqs pb-5">
     <div class="container">
         <h2 class="section-title">Google Shopping FAQ's</h2>
         <div itemscope itemtype="https://schema.org/FAQPage" class="row">
@@ -328,8 +330,6 @@
         </div>
     </div>
 </section>
-
-{% include "partials/en-section-free-session.twig" %}
 
 {% include "partials/en-form-popup.twig" with {'form_page': 'Google Shopping (Pop-up Form)'} %}
 
