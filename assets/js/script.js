@@ -67,11 +67,13 @@ $(function () {
     // Is at top
     if ($(window).scrollTop() === 0 && nav.hasClass("min-header")) {
       nav.removeClass("min-header");
-      $('#scroll-nav-logo').hide();
+      $("#scroll-nav-logo").hide();
+      $(".fixed-top-no-nav").addClass("fixed-top-margin");
       // Is not
     } else {
       nav.addClass("min-header");
-      $('#scroll-nav-logo').show();
+      $("#scroll-nav-logo").show();
+      $(".fixed-top-no-nav").removeClass("fixed-top-margin");
     }
   });
   if ($(window).scrollTop() > 0) {
@@ -369,8 +371,7 @@ $(function () {
               event: "formSubmissionSucess",
               eventCategory: "Form Submission",
               eventAction: formPath,
-              eventLabel: "Submitted-" + pathname
-
+              eventLabel: "Submitted-" + pathname,
             });
 
             // Check Product Type
@@ -1040,79 +1041,76 @@ $(function () {
   $('[data-toggle="popover"]').popover();
 });
 
-function goToPage(url){
-  $(location).attr('href', url);
+function goToPage(url) {
+  $(location).attr("href", url);
 }
 
 //home page comparison section
-$( document ).ready(function() {
-  $('#comparison_fp_read_more_btn').click(function(){
-    $('#comparison_fp_hide_content').removeClass('d-none');
-    $('#comparison_fp_read_more_btn').removeClass('d-block');
-    $('#comparison_fp_read_more_btn').addClass('d-none');
-    $('#comparison_fp_read_less_btn').removeClass('d-none');
-    $('#comparison_fp_read_less_btn').addClass('d-block d-md-none');
-
-  })
-
-  $('#comparison_other_read_more_btn').click(function(){
-    $('#comparison_other_hide_content').removeClass('d-none');
-    $('#comparison_other_read_more_btn').removeClass('d-block');
-    $('#comparison_other_read_more_btn').addClass('d-none');
-    $('#comparison_other_read_less_btn').removeClass('d-none');
-    $('#comparison_other_read_less_btn').addClass('d-block d-md-none');
-  })
-
-  $('#comparison_fp_read_less_btn').click(function(){
-    $('#comparison_fp_read_less_btn').removeClass('d-block');
-    $('#comparison_fp_read_less_btn').addClass('d-none');
-    $('#comparison_fp_read_more_btn').removeClass('d-none');
-    $('#comparison_fp_read_more_btn').addClass('d-block');
-    $('#comparison_fp_hide_content').removeClass('d-block');
-    $('#comparison_fp_hide_content').addClass('d-none');
-  })
-
-  $('#comparison_other_read_less_btn').click(function(){
-    $('#comparison_other_read_less_btn').removeClass('d-block');
-    $('#comparison_other_read_less_btn').addClass('d-none');
-    $('#comparison_other_read_more_btn').removeClass('d-none');
-    $('#comparison_other_read_more_btn').addClass('d-block');
-    $('#comparison_other_hide_content').removeClass('d-block');
-    $('#comparison_other_hide_content').addClass('d-none');
-  })
-});
-
-function readMoreToggle(id){
-  console.log('read more:' + id);
-  $('#toggle-content-'+ id).removeClass('d-none');
-  $('#read-more-toggle-btn-' + id).removeClass('d-block');
-  $('#read-more-toggle-btn-' + id).addClass('d-none');
-  $('#read-less-toggle-btn-' + id).removeClass('d-none');
-  $('#read-less-toggle-btn-' + id).addClass('d-block d-md-none');
-}
-
-function readLessToggle(id){
-  console.log("read less:" +id);
-  $('#read-less-toggle-btn-' + id).removeClass('d-block');
-  $('#read-less-toggle-btn-' + id).addClass('d-none');
-  $('#read-more-toggle-btn-' + id).removeClass('d-none');
-  $('#read-more-toggle-btn-' + id).addClass('d-block');
-  $('#toggle-content-'+ id).removeClass('d-block');
-  $('#toggle-content-'+ id).addClass('d-none');
-}
-
-$(function (){
-  $( ".buttonFormClick" ).click(function() {
-    // var title = $(this).attr('data-title');
-    formPath =  $(this).attr('data-title');
-    $('.form-type').each(function( index ) {
-      // console.log(title);
-      console.log('form path: ' + formPath);
-
-      // $('.form-type')[index].value = title;
-      $('.form-type')[index].value = formPath;
-    });
+$(document).ready(function () {
+  $("#comparison_fp_read_more_btn").click(function () {
+    $("#comparison_fp_hide_content").removeClass("d-none");
+    $("#comparison_fp_read_more_btn").removeClass("d-block");
+    $("#comparison_fp_read_more_btn").addClass("d-none");
+    $("#comparison_fp_read_less_btn").removeClass("d-none");
+    $("#comparison_fp_read_less_btn").addClass("d-block d-md-none");
   });
 
+  $("#comparison_other_read_more_btn").click(function () {
+    $("#comparison_other_hide_content").removeClass("d-none");
+    $("#comparison_other_read_more_btn").removeClass("d-block");
+    $("#comparison_other_read_more_btn").addClass("d-none");
+    $("#comparison_other_read_less_btn").removeClass("d-none");
+    $("#comparison_other_read_less_btn").addClass("d-block d-md-none");
+  });
 
-})
+  $("#comparison_fp_read_less_btn").click(function () {
+    $("#comparison_fp_read_less_btn").removeClass("d-block");
+    $("#comparison_fp_read_less_btn").addClass("d-none");
+    $("#comparison_fp_read_more_btn").removeClass("d-none");
+    $("#comparison_fp_read_more_btn").addClass("d-block");
+    $("#comparison_fp_hide_content").removeClass("d-block");
+    $("#comparison_fp_hide_content").addClass("d-none");
+  });
+
+  $("#comparison_other_read_less_btn").click(function () {
+    $("#comparison_other_read_less_btn").removeClass("d-block");
+    $("#comparison_other_read_less_btn").addClass("d-none");
+    $("#comparison_other_read_more_btn").removeClass("d-none");
+    $("#comparison_other_read_more_btn").addClass("d-block");
+    $("#comparison_other_hide_content").removeClass("d-block");
+    $("#comparison_other_hide_content").addClass("d-none");
+  });
+});
+
+function readMoreToggle(id) {
+  console.log("read more:" + id);
+  $("#toggle-content-" + id).removeClass("d-none");
+  $("#read-more-toggle-btn-" + id).removeClass("d-block");
+  $("#read-more-toggle-btn-" + id).addClass("d-none");
+  $("#read-less-toggle-btn-" + id).removeClass("d-none");
+  $("#read-less-toggle-btn-" + id).addClass("d-block d-md-none");
+}
+
+function readLessToggle(id) {
+  console.log("read less:" + id);
+  $("#read-less-toggle-btn-" + id).removeClass("d-block");
+  $("#read-less-toggle-btn-" + id).addClass("d-none");
+  $("#read-more-toggle-btn-" + id).removeClass("d-none");
+  $("#read-more-toggle-btn-" + id).addClass("d-block");
+  $("#toggle-content-" + id).removeClass("d-block");
+  $("#toggle-content-" + id).addClass("d-none");
+}
+
+$(function () {
+  $(".buttonFormClick").click(function () {
+    // var title = $(this).attr('data-title');
+    formPath = $(this).attr("data-title");
+    $(".form-type").each(function (index) {
+      // console.log(title);
+      console.log("form path: " + formPath);
+
+      // $('.form-type')[index].value = title;
+      $(".form-type")[index].value = formPath;
+    });
+  });
+});
