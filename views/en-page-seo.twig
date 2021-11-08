@@ -10,6 +10,29 @@
 		.case-study-md-img {
 			margin-bottom: -36px;
 		}
+		.slick-next,
+		.slick-prev {
+			width: 56px !important;
+			height: 56px !important;
+		}
+		.container-padding {
+			padding: 0 34px;
+		}
+		@media(max-width: 767px) {
+			.container-padding {
+				padding: 0 15px;
+			}
+		}
+		@media(max-width: 991px) {
+			section.section-paragraph .text-container {
+				padding: 0 15px 0 34px !important;
+			}
+		}
+		@media(max-width: 767px) {
+			section.section-paragraph .text-container {
+				padding: 0 15px !important;
+			}
+		}
 	</style>
 
 	<section class="banner form-space">
@@ -18,11 +41,11 @@
 				<h1 class="form-hide">Grow 10 times faster with exceptional SEO</h1>
 				<div class="banner-description">
 					<p class="form-hide">
-						Blow your competition away and absolutely dominate Google by
-						          partnering with the highest rated SEO agency in APAC.
+						Blow your competition away and absolutely dominate Google by partnering with the highest rated SEO agency in APAC.
 					</p>
 					<div class="form-hide hero-mobile">
-						<img src="{{ site.theme.link }}/assets/img/img_hero_seo_mob.png" srcset="{{ site.theme.link }}/assets/img/img_hero_seo_mob.png, {{ site.theme.link }}/assets/img/img_hero_seo_mob@2x.png 2x" alt="First Page"/>
+						<img src="{{ site.theme.link }}/assets/img/img_hero_seo_mob.png" srcset="{{ site.theme.link }}/assets/img/img_hero_seo_mob.png, {{ site.theme.link }}/assets/img/img_hero_seo_mob_update@2x.png 2x" alt="First Page"/>
+
 					</div>
 				</div>
 				{% include "partials/en-form-services.twig" with {'form_page': 'SEO',
@@ -40,36 +63,28 @@
 
 	{% include "partials/en-section-featured-in-news.twig" %}
 
+
 	<section class="section-paragraph">
+		<h2 class="d-none d-md-block d-lg-none container-padding">Triple the size of your business by teaming up with an award-winning SEO company</h2>
+
 		<div class="row no-gutters flex-column-reverse flex-md-row flex-md-row-reverse">
-			<h2 class="d-none d-md-block d-lg-none ml-2">Triple the size of your business by teaming up with an award-winning SEO company</h2>
 			<div class="col-12 col-md-6 image-container-right">
-				<img
-				src="{{ site.theme.link }}/assets/img/img_profit.svg" class="img-fluid d-none d-md-inline-block pr-3" alt="First Page"/>
-			{# <img
-			        src="{{ site.theme.link }}/assets/img/img_profit_mob.svg"
-			        class="img-fluid d-md-none"
-			        alt="First Page"
-			      /> #}
+				<img src="{{ site.theme.link }}/assets/img/img_profit.svg" srcset="{{ site.theme.link }}/assets/img/img_profit.svg, {{ site.theme.link }}/assets/img/img_profit.svg" class="img-fluid d-none d-lg-inline-block" alt="First Page"/>
+				<img src="{{ site.theme.link }}/assets/img/img_profit.svg" srcset="{{ site.theme.link }}/assets/img/img_profit.svg, {{ site.theme.link }}/assets/img/img_profit.svg" class="img-fluid d-none d-md-inline-block d-lg-none" alt="First Page"/>
 			</div>
-			<div class="col-12 col-md-6 text-container text-container-seo-new">
+			<div class="col-12 col-md-6 text-container">
 				<h2 class="d-block d-md-none d-lg-block">
-					Triple the size of your business by teaming up with an
-					<br class="d-none d-lg-block"/>
-					award-winning SEO company
+					Triple the size of your business by teaming up with an award-winning SEO company
 				</h2>
 				<img src="{{ site.theme.link }}/assets/img/img_profit_mob.svg" class="img-fluid d-block d-md-none mx-auto pb-4" alt="First Page"/>
 				<p class="text-center text-md-left">
-					At First Page, we believe your business is a unique achievement. What
-					        you do deserves to be seen by the world - and that means absolutely
-					        dominating Google for your industry.
+					SEO agencies talk a big game, but the majority actually lack real world business experience. They’ve never built a successful business outside of their agency. They’re actually recommending strategies that will fill their back pocket.
 				</p>
+				<p class="text-center text-md-left">The First Page team owns and operates companies outside of the agency industry so we know exactly how to build a profitable online business in a short amount of time. Stuff the guesswork, work with an agency who actually has real world business growth experience.
+				</p>
+
 				<p class="text-center text-md-left">
-					In today’s digital economy, you MUST build an attention-grabbing online
-					        presence that sets you apart from your competition... First Page is all
-					        about delivering the visibility you deserve! We’re the game-changing SEO
-					        agency that specialises in driving an obscene amount of traffic to your
-					        website.
+					In today’s digital economy, you MUST build an attention-grabbing online presence that sets you apart from your competition... First Page is all about delivering the visibility you deserve! We’re the game-changing SEO agency that specialises in driving an obscene amount of traffic to your website.
 				</p>
 				<button type="button" data-title="seopage-get-freeproposal-Triple" class="btn fp-btn fp-btn-orange show-popup-form buttonFormClick">
 					GET A FREE QUOTE
@@ -79,36 +94,21 @@
 	</section>
 
 	<section class="section-paragraph">
+		<h2 class="d-none d-md-block d-lg-none text-container">
+			Why risk your business and livelihood by outsourcing your SEO to an agency that outsources to a developing country.
+		</h2>
 		<div class="row no-gutters flex-column-reverse flex-md-row">
-			<h2 class="d-none d-md-block d-lg-none ml-3">
-				Why risk your business and livelihood by outsourcing your SEO to an agency
-				      that outsources to a developing country.
-			</h2>
-
 			<div class="col-12 col-md-6 image-container-left pr-lg-5">
 				<img src="{{ site.theme.link }}/assets/img/img_seo_we_dont_outsource.png" srcset="{{ site.theme.link }}/assets/img/img_office_chat_lg@2x.png, {{ site.theme.link }}/assets/img/img_office_chat_lg@2x.png 2x" class="img-fluid d-none d-lg-inline-block" alt="First Page"/>
 				<img src="{{ site.theme.link }}/assets/img/img_office_chat_md.png" srcset="{{ site.theme.link }}/assets/img/img_office_chat_md@2x.png, {{ site.theme.link }}/assets/img/img_office_chat_md@2x.png 2x" class="img-fluid d-none d-md-inline-block d-lg-none" alt="First Page"/>
-
 			</div>
 			<div class="col-12 col-md-6 text-container">
 				<h2 class="d-block d-md-none d-lg-block">
-					Why risk your business and livelihood by outsourcing your SEO to an
-					        agency that outsources to a developing country.
+					Why risk your business and livelihood by outsourcing your SEO to an agency that outsources to a developing country.
 				</h2>
 				<img src="{{ site.theme.link }}/assets/img/img_office_chat_sm.png" srcset="{{ site.theme.link }}/assets/img/img_office_chat_sm.png, {{ site.theme.link }}/assets/img/img_office_chat_sm@2x.png 2x" class="img-fluid d-block d-md-none mx-auto pb-4" alt="First Page"/>
-				<p class="text-center text-md-left">
-					99% of the SEO companies in Australia compromise on quality by
-					        outsourcing to third world countries. We just don’t get it. We should be
-					        called the SEO agency clean-up crew, because time and time again, we are
-					        cleaning up the mess when a third party has outsourced overseas. The
-					        whole process ends up costing the business more money and time to
-					        reverse the problem. Plus think of the opportunity cost!
-				</p>
-				<p class="text-center text-md-left">
-					We take pride in keeping everything in-house and we would never
-					        jeopardise your business by cutting corners. So why risk your business,
-					        your income, your livelihood with an SEO agency who cuts corners.
-				</p>
+				<p class="text-center text-md-left">99% of the seo companies in Australia compromise on quality by outsourcing to third world countries. We just don’t get it. We actually have a nickname “the clean-up crew”, because time and time again, we are cleaning up the mess when a third party has outsourced overseas. The whole process ends up costing the business more money and time to reverse the problem. Plus think of the opportunity cost!</p>
+				<p class="text-center text-md-left">We take pride in keeping everything in-house and we would never jeopardise your business by cutting corners. So why risk your business, your income and your livelihood with an seo agency who cuts corners.</p>
 				<button type="button" data-title="seopage-get-freeproposal-Why" class="btn fp-btn fp-btn-orange show-popup-form buttonFormClick">
 					GET A FREE QUOTE
 				</button>
@@ -220,45 +220,27 @@
 				</div>
 			</div>
 		</div>
-
-
 	</section>
 
-
 	<section class="section-paragraph">
-		<div class="row no-gutters flex-column-reverse flex-md-row flex-md-row-reverse">
-			<h2 class="d-none d-md-block d-lg-none ml-3">
-				Get more leads and sales than your business can handle with insanely good
-				      SEO.
-			</h2>
-			<div class="col-12 col-md-6 image-container-right pl-lg-5">
-				<img src="{{ site.theme.link }}/assets/img/img_seo_traffic.png" srcset="{{ site.theme.link }}/assets/img/img_seo_traffic.png, {{ site.theme.link }}/assets/img/img_seo_traffic@2x.png 2x" class="img-fluid d-none d-md-inline-block" alt="First Page"/>
-
+		<h2 class="d-none d-md-block d-lg-none text-container">
+			Get more leads and sales than your business can handle with insanely good SEO.
+		</h2>
+		<div class="row no-gutters flex-column-reverse flex-md-row">
+			<div class="col-12 col-md-6 image-container-left pr-lg-5">
+				<img src="{{ site.theme.link }}/assets/img/img_seo_traffic.png" srcset="{{ site.theme.link }}/assets/img/img_seo_traffic.png, {{ site.theme.link }}/assets/img/img_seo_traffic@2x.png 2x" class="img-fluid d-none d-lg-inline-block" alt="First Page"/>
+				<img src="{{ site.theme.link }}/assets/img/img_seo_traffic.png" srcset="{{ site.theme.link }}/assets/img/img_seo_traffic.png, {{ site.theme.link }}/assets/img/img_seo_traffic@2x.png 2x" class="img-fluid d-none d-md-inline-block d-lg-none" alt="First Page"/>
 			</div>
-			<div class="col-12 col-md-6 text-container text-container-seo-new">
+			<div class="col-12 col-md-6 text-container">
 				<h2 class="d-block d-md-none d-lg-block">
-					Get more leads and sales than your business can handle with insanely
-					        good SEO.
+					Get more leads and sales than your business can handle with insanely good SEO.
 				</h2>
 				<img src="{{ site.theme.link }}/assets/img/img_seo_traffic_mob.png" srcset="{{ site.theme.link }}/assets/img/img_seo_traffic_mob.png, {{ site.theme.link }}/assets/img/img_seo_traffic_mob@2x.png 2x" class="img-fluid d-block d-md-none mx-auto pb-4" alt="First Page"/>
-				<div class="pt-2 d-block d-sm-none"></div>
-				<p>
-					The details are in the data and that’s why we are obsessed with data
-					        when making decisions that directly impact your SEO strategy and your
-					        business. Just a slight tweak to your SEO strategy can dramatically
-					        impact the way of your website ranks and displays in the search results.
-				</p>
-				<p>
-					This is pretty crazy, but we have the ability to predict Google
-					        algorithm updates due to custom built, in-house proprietary tech -
-					        SENTR<span style="font-size: 22px">&trade;</span>. What does this mean
-						        for you? Imagine the possibilities if you could predict the future. With
-						        the huge amount of data SENTR<span style="font-size: 22px">&trade;</span>
-					processes, we have the ability to prepare and capitalise on future
-					        algorithmic updates. We’re always one step ahead, that’s why we provide
-					        the best SEO services in Australia.
-				</p>
-				<button type="button" data-title="seopage-get-freeproposal-Get" class="btn fp-btn fp-btn-orange show-popup-form buttonFormClick">
+				<p class="text-cente text-md-left">The details are in the data and that’s why we are obsessed with data when making decisions that directly impact your SEO strategy and your business. Just a slight tweak to your SEO strategy can dramatically impact the way of your website ranks and displays in the search results.</p>
+
+				<p class="text-center text-md-left">This is pretty crazy, but we have the ability to predict Google algorithm updates due to custom built, in-house proprietary tech - SENTR™. What does this mean for you? Imagine the possibilities if you could predict the future. With the huge amount of data SENTR™ processes, we have the ability to prepare and capitalise on future algorithmic updates. We’re always one step ahead, that’s why we provide the best SEO services in Australia.</p>
+
+				<button type="button" data-title="seopage-get-freeproposal-Why" class="btn fp-btn fp-btn-orange show-popup-form buttonFormClick">
 					GET A FREE QUOTE
 				</button>
 			</div>
@@ -313,7 +295,7 @@
 			<div class="col-12 col-lg-6">
 				<div class="d-flex align-items-start">
 					<img class="blueTickIcon" src="{{ site.theme.link }}/assets/img/icon_blue_tick.svg" alt="First Page"/>
-					<p>Nothing is outsourced overseas. We employ 170+ in-house performance marketers, SEO technicians, developers and social media specialists in our Melbourne office.</p>
+					<p>Your campaign builds, research and data are yours to keep.</p>
 				</div>
 			</div>
 		</div>
@@ -330,7 +312,7 @@
 		<div class="col-12 col-lg-6">
 			<div class="d-flex align-items-start">
 				<img class="blueTickIcon" src="{{ site.theme.link }}/assets/img/icon_blue_tick.svg" alt="First Page"/>
-				<p>Unbeatable quarterly performance milestones.</p>
+				<p>Nothing is outsourced overseas. We employ 170+ in-house performance marketers, SEO technicians, developers and social media specialists in our Melbourne office.</p>
 			</div>
 		</div>
 	</div>
@@ -345,7 +327,7 @@
 		<div class="col-12 col-lg-6">
 			<div class="d-flex align-items-start">
 				<img class="blueTickIcon" src="{{ site.theme.link }}/assets/img/icon_blue_tick.svg" alt="First Page"/>
-				<p>Your campaign builds, research and data are yours to keep.</p>
+				<p>Unbeatable quarterly performance milestones.</p>
 			</div>
 		</div>
 	</div>
@@ -356,9 +338,8 @@
 
 <section class="section-paragraph">
 	<div class="row no-gutters flex-column-reverse flex-md-row flex-md-row-reverse">
-		<h2 class="d-none d-md-block d-lg-none ml-3">
-			Play the SEO game better than your competition, otherwise you’ll be left
-			        behind.
+		<h2 class="d-none d-md-block d-lg-none container-padding">
+			Play the SEO game better than your competition, otherwise you’ll be left behind.
 		</h2>
 		<div class="col-12 col-md-6 image-container-right">
 			<img src="{{ site.theme.link }}/assets/img/img_google_search.svg" class="img-fluid d-none d-md-inline-block" alt="First Page"/>
@@ -366,23 +347,22 @@
 		</div>
 		<div class="col-12 col-md-6 text-container">
 			<h2 class="d-block d-md-none d-lg-block">
-				Play the SEO game better than your competition, otherwise you’ll be left
-				        behind.
+				Play the SEO game better than your competition, otherwise you’ll be left behind.
 			</h2>
 			<img src="{{ site.theme.link }}/assets/img/img_google_search_mob.svg" class="img-fluid d-block d-md-none mx-auto pb-4" alt="First Page"/>
 			<p>
 				The reality is, whoever doubles down on their SEO will win in the end.
-				        What do I mean by win? Well, winning is absolutely dominating Google for
-				        your industry. Extreme brand domination will drive traffic, leads &
-				        sales which directly impacts your revenue and your back pocket.
+																																																																																																																																																																																																																																																																																																																																																																																																																        What do I mean by win? Well, winning is absolutely dominating Google for
+																																																																																																																																																																																																																																																																																																																																																																																																																        your industry. Extreme brand domination will drive traffic, leads &
+																																																																																																																																																																																																																																																																																																																																																																																																																        sales which directly impacts your revenue and your back pocket.
 			</p>
 			<p>
 				Keep this in mind, 3.5 billion Google searches are conducted every day.
-				        The top 5 organic search results receive 68% of these clicks.
+																																																																																																																																																																																																																																																																																																																																																																																																																        The top 5 organic search results receive 68% of these clicks.
 			</p>
 			<p>
 				The real question is - can you afford NOT to be on the first page of
-				        Google?
+																																																																																																																																																																																																																																																																																																																																																																																																																        Google?
 			</p>
 			<button type="button" data-title="seopage-get-freeproposal-Play" class="btn fp-btn fp-btn-orange show-popup-form buttonFormClick">
 				GET A FREE QUOTE
@@ -467,7 +447,7 @@
 				<a href="{{home_url}}seo-canberra/" class="locationName locationCanberra">Canberra</a>
 				<a href="{{home_url}}seo-melbourne/" class="locationName locationMelbourne">Melbourne</a>
 				<p class="locationName locationHobart locationText">Hobart</p>
-				<a href="{{home_url}}seo-parramatta/" class="locationName locationParamatta">Parramatta</a>
+				<a href="{{home_url}}seo-paramatta/" class="locationName locationParamatta">Parramatta</a>
 				<p class="locationName locationGeelong locationText">Geelong</p>
 				<a href="{{home_url}}seo-ballarat/" class="locationName locationBallarat">Ballarat</a>
 				<p class="locationName locationBendigo locationText">Bendigo</p>
