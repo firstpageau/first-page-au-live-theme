@@ -2,16 +2,21 @@
 
 {% block content %}
 
+	<style>
+		@media(min-width: 992px) {
+			section.banner .banner-hero .banner-hero-cont {
+				max-width: 800px;
+			}
+		}
+	</style>
+
 	<section class="banner form-space instagram-advertising-banner">
 		<div class="container banner-hero ">
 			<div class="banner-hero-cont">
-				<h1 class="form-hide text-center text-sm-left">Grow insanely fast
-					<br>
-					with the #1 SEO agency
+				<h1 class="form-hide text-center text-sm-left">Grow insanely fast with the
 					<br class="d-none d-lg-block">
-					in the Gold Coast</h1>
-				{# <h1 class="form-hide text-center text-sm-left">10X your business with the #1 SEO agency in the Gold Coast</h1> #}
-
+					#1 SEO agency in the Gold Coast
+				</h1>
 				<div class="banner-img-mb d-sm-none form-hide">
 					<img src="{{ site.theme.link }}/assets/img/gold-coast-banner-sm.png" srcset="{{ site.theme.link }}/assets/img/gold-coast-banner-sm.png, {{ site.theme.link }}/assets/img/gold-coast-banner-sm@2x.png 2x" alt="First Page"/>
 				</div>
@@ -150,7 +155,9 @@
 
 	<section class="section-paragraph">
 		<div class="container">
-			<h2 class="text-center text-sm-left section-title-ml">Here at First Page, we are the fastest-growing SEO company, in Gold Coast and the APAC region.</h2>
+			<h2 class="text-center section-title-ml">Here at First Page, we are the fastest-growing<br class="d-none d-lg-block">
+				SEO company, in Gold Coast and the APAC region.</h2>
+
 			<div class="row no-gutters justify-content-center ">
 
 				<div class="col-12 col-md-6 text-container">
@@ -177,7 +184,7 @@
 	{% include "partials/en-section-free-session.twig" %}
 	{% include "partials/en-section-experience.twig" %}
 	{# <div class="d-none d-md-block d-lg-none">{% include "partials/en-section-services-seo-tablet.twig" %}</div>
-		    <div class="d-block d-md-none d-lg-block">{% include "partials/en-section-services-seo-new.twig" %}</div> #}
+											    <div class="d-block d-md-none d-lg-block">{% include "partials/en-section-services-seo-new.twig" %}</div> #}
 	{% include "partials/en-section-services-seo-carousel.twig" %}
 
 	<section class="section-paragraph section-faqs pb-5">
