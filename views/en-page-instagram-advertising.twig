@@ -30,7 +30,7 @@
 		}
 		@media(min-width: 992px) {
 			section.banner .banner-hero .banner-hero-cont {
-				max-width: 800px;
+				max-width: 800px !important;
 			}
 		}
 	</style>
@@ -236,8 +236,8 @@
 						<strong>Rolls-Royce</strong>
 					</h2>
 					{# <ul class="tag">
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					            <li>SEO</li>
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					        </ul> #}
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									            <li>SEO</li>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									        </ul> #}
 					<p>The luxury car marker was keen to penetrate the younger, high net worth demographic by rolling out car exhibitions across Asia. First Page was engaged to drive registrations and did we ever!</p>
 				</div>
 
@@ -262,6 +262,8 @@
 			</div>
 		</div>
 	</section>
+
+	{% include "partials/en-section-free-session.twig" %}
 
 	<section class="section-paragraph section-faqs">
 		<div class="container">
@@ -506,9 +508,6 @@
 			</div>
 		</div>
 	</section>
-
-
-	{% include "partials/en-section-free-session.twig" %}
 
 	{% include "partials/en-form-popup.twig" with {'form_page': 'Instagram Ads (Pop-up Form)'} %}
 {% endblock %}
