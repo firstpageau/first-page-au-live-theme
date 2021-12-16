@@ -3425,27 +3425,9 @@ section.banner .mid-buttons .mid-buttons-desc {
   clip-path: polygon(75% 0, 100% 0, 100% 100%, 55% 100%);
 }
 
-@media (max-width: 2050px) {
+@media only screen and (max-width: 1200px) {
   .sunshine-page-banner .banner-hero-image img {
-    height: 100%;
-    width: 100%;
     clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
-  }
-}
-
-@media (max-width: 1500px) {
-  .sunshine-page-banner .banner-hero-image img {
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(91% 0, 100% 0, 100% 100%, 71% 100%);
-  }
-}
-
-@media (max-width: 1200px) {
-  .sunshine-page-banner .banner-hero-image img {
-    height: 100%;
-    width: 100%;
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 80% 100%);
   }
 }
 
@@ -12428,28 +12410,39 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator section.banner,
+.page-facebook-interest-finder section.banner,
 .page-seo-roi-calculator section.banner {
   background: linear-gradient(225deg, #427fdf 0%, #396bb1 100%);
 }
 
 .page-ppc-roi-calculator section.banner .container,
+.page-facebook-interest-finder section.banner .container,
 .page-seo-roi-calculator section.banner .container {
   padding-right: 30px;
   padding-left: 30px;
 }
 
 .page-ppc-roi-calculator section.banner .container .row img,
+.page-facebook-interest-finder section.banner .container .row img,
 .page-seo-roi-calculator section.banner .container .row img {
   margin: auto 0;
   margin-top: 20px;
 }
 
 .page-ppc-roi-calculator .fp-container,
+.page-facebook-interest-finder .fp-container,
 .page-seo-roi-calculator .fp-container {
   max-width: 1080px;
 }
 
+.page-ppc-roi-calculator .fb-container,
+.page-facebook-interest-finder .fb-container,
+.page-seo-roi-calculator .fb-container {
+  max-width: 1080px;
+}
+
 .page-ppc-roi-calculator .switch-container,
+.page-facebook-interest-finder .switch-container,
 .page-seo-roi-calculator .switch-container {
   text-align: center;
   margin-top: 20px;
@@ -12459,6 +12452,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator section.banner h1,
+.page-facebook-interest-finder section.banner h1,
 .page-seo-roi-calculator section.banner h1 {
   padding: 0;
   letter-spacing: normal;
@@ -12467,17 +12461,23 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator section.banner p,
+.page-facebook-interest-finder section.banner p,
 .page-seo-roi-calculator section.banner p {
   font-size: 22px;
   line-height: 25px;
 }
 
 .page-ppc-roi-calculator #fp-roi-calculator .fp-container.roi-for-section,
+.page-facebook-interest-finder #fp-roi-calculator .fp-container.roi-for-section,
 .page-seo-roi-calculator #fp-roi-calculator .fp-container.roi-for-section {
   padding: 0 15px;
 }
 
 .page-ppc-roi-calculator
+  #fp-roi-calculator
+  .fp-container.roi-for-section
+  .row.mx-0,
+.page-facebook-interest-finder
   #fp-roi-calculator
   .fp-container.roi-for-section
   .row.mx-0,
@@ -12488,7 +12488,27 @@ section.section-multiform .mform-container {
   border-radius: 10px;
 }
 
+.page-ppc-roi-calculator #fp-roi-calculator .facebook-box-shadow,
+.page-facebook-interest-finder #fp-roi-calculator .facebook-box-shadow,
+.page-seo-roi-calculator #fp-roi-calculator .facebook-box-shadow {
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 20px #80808014;
+}
+
+@media (max-width: 767px) {
+  .page-ppc-roi-calculator #fp-roi-calculator .facebook-box-shadow,
+  .page-facebook-interest-finder #fp-roi-calculator .facebook-box-shadow,
+  .page-seo-roi-calculator #fp-roi-calculator .facebook-box-shadow {
+    box-shadow: none;
+  }
+}
+
 .page-ppc-roi-calculator
+  .fp-container.roi-for-section
+  + .fp-container.roi-for-section,
+.page-facebook-interest-finder
   .fp-container.roi-for-section
   + .fp-container.roi-for-section,
 .page-seo-roi-calculator
@@ -12498,11 +12518,13 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-text,
+.page-facebook-interest-finder .fp-text,
 .page-seo-roi-calculator .fp-text {
   text-align: left;
 }
 
 .page-ppc-roi-calculator .fp-container label,
+.page-facebook-interest-finder .fp-container label,
 .page-seo-roi-calculator .fp-container label {
   margin: 2px;
   font-weight: 700;
@@ -12513,11 +12535,13 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container label > img,
+.page-facebook-interest-finder .fp-container label > img,
 .page-seo-roi-calculator .fp-container label > img {
   cursor: pointer;
 }
 
 .page-ppc-roi-calculator .fp-container .spml,
+.page-facebook-interest-finder .fp-container .spml,
 .page-seo-roi-calculator .fp-container .spml {
   font-weight: normal;
   margin-left: 10px;
@@ -12525,6 +12549,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .show-pmc,
+.page-facebook-interest-finder .fp-container .show-pmc,
 .page-seo-roi-calculator .fp-container .show-pmc {
   align-items: baseline;
   font-size: 14px;
@@ -12535,16 +12560,19 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .footer-roi,
+.page-facebook-interest-finder .footer-roi,
 .page-seo-roi-calculator .footer-roi {
   color: #aaa;
 }
 
 .page-ppc-roi-calculator .fp-container .badge,
+.page-facebook-interest-finder .fp-container .badge,
 .page-seo-roi-calculator .fp-container .badge {
   font-size: inherit;
 }
 
 .page-ppc-roi-calculator .fp-container .list-group-item,
+.page-facebook-interest-finder .fp-container .list-group-item,
 .page-seo-roi-calculator .fp-container .list-group-item {
   background-color: transparent;
   border-bottom: 1px solid #fff;
@@ -12555,11 +12583,17 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .list-group-item.monthly-roi,
+.page-facebook-interest-finder .fp-container .list-group-item.monthly-roi,
 .page-seo-roi-calculator .fp-container .list-group-item.monthly-roi {
   border-bottom: none;
 }
 
 .page-ppc-roi-calculator
+  .fp-container
+  .list-group
+  .list-group-item.monthly-roi
+  .badge-pill,
+.page-facebook-interest-finder
   .fp-container
   .list-group
   .list-group-item.monthly-roi
@@ -12573,11 +12607,13 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .list-group .badge-pill,
+.page-facebook-interest-finder .fp-container .list-group .badge-pill,
 .page-seo-roi-calculator .fp-container .list-group .badge-pill {
   background: transparent;
 }
 
 .page-ppc-roi-calculator .fp-container .fp-show-value,
+.page-facebook-interest-finder .fp-container .fp-show-value,
 .page-seo-roi-calculator .fp-container .fp-show-value {
   font-size: 1.3em;
   font-weight: 700;
@@ -12585,11 +12621,13 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .more-margin-150,
+.page-facebook-interest-finder .more-margin-150,
 .page-seo-roi-calculator .more-margin-150 {
   margin-top: 120px;
 }
 
 .page-ppc-roi-calculator .fp-container .fp-text,
+.page-facebook-interest-finder .fp-container .fp-text,
 .page-seo-roi-calculator .fp-container .fp-text {
   padding: 15px 0;
   margin: 0;
@@ -12599,37 +12637,44 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-hide-block,
+.page-facebook-interest-finder .fp-hide-block,
 .page-seo-roi-calculator .fp-hide-block {
   display: none !important;
 }
 
 .page-ppc-roi-calculator .fp-shadow-left,
+.page-facebook-interest-finder .fp-shadow-left,
 .page-seo-roi-calculator .fp-shadow-left {
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.075);
 }
 
 .page-ppc-roi-calculator .fp-border-radius-left,
+.page-facebook-interest-finder .fp-border-radius-left,
 .page-seo-roi-calculator .fp-border-radius-left {
   background: #fff;
 }
 
 .page-ppc-roi-calculator .fp-shadow-right,
+.page-facebook-interest-finder .fp-shadow-right,
 .page-seo-roi-calculator .fp-shadow-right {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
 .page-ppc-roi-calculator .fp-border-radius-right,
+.page-facebook-interest-finder .fp-border-radius-right,
 .page-seo-roi-calculator .fp-border-radius-right {
   background: #427fe0;
   color: #fff;
 }
 
 .page-ppc-roi-calculator .fp-bg-color,
+.page-facebook-interest-finder .fp-bg-color,
 .page-seo-roi-calculator .fp-bg-color {
   background: #427fe0;
 }
 
 .page-ppc-roi-calculator .fp-logo,
+.page-facebook-interest-finder .fp-logo,
 .page-seo-roi-calculator .fp-logo {
   margin: 0 auto;
   width: 212px;
@@ -12638,6 +12683,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-slider,
+.page-facebook-interest-finder .fp-slider,
 .page-seo-roi-calculator .fp-slider {
   -webkit-appearance: none;
   width: 100%;
@@ -12651,6 +12697,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-slider::-webkit-slider-thumb,
+.page-facebook-interest-finder .fp-slider::-webkit-slider-thumb,
 .page-seo-roi-calculator .fp-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -12663,6 +12710,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-slider::-moz-range-thumb,
+.page-facebook-interest-finder .fp-slider::-moz-range-thumb,
 .page-seo-roi-calculator .fp-slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
@@ -12673,6 +12721,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-vertical-align,
+.page-facebook-interest-finder .fp-vertical-align,
 .page-seo-roi-calculator .fp-vertical-align {
   display: flex;
   align-items: center;
@@ -12680,12 +12729,14 @@ section.section-multiform .mform-container {
 
 @media (min-width: 768px) {
   .page-ppc-roi-calculator .fp-vertical-align > .col-md-4,
+  .page-facebook-interest-finder .fp-vertical-align > .col-md-4,
   .page-seo-roi-calculator .fp-vertical-align > .col-md-4 {
     -ms-flex: 0 0 40%;
     flex: 0 0 40%;
     max-width: 40%;
   }
   .page-ppc-roi-calculator .fp-vertical-align > .col-md-6,
+  .page-facebook-interest-finder .fp-vertical-align > .col-md-6,
   .page-seo-roi-calculator .fp-vertical-align > .col-md-6 {
     -ms-flex: 0 0 43.333333%;
     flex: 0 0 43.333333%;
@@ -12694,6 +12745,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .switch,
+.page-facebook-interest-finder .fp-container .switch,
 .page-seo-roi-calculator .fp-container .switch {
   position: relative;
   display: inline-block;
@@ -12702,6 +12754,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .switch input,
+.page-facebook-interest-finder .fp-container .switch input,
 .page-seo-roi-calculator .fp-container .switch input {
   opacity: 0;
   width: 0;
@@ -12709,6 +12762,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .switch-slider,
+.page-facebook-interest-finder .fp-container .switch-slider,
 .page-seo-roi-calculator .fp-container .switch-slider {
   position: absolute;
   cursor: pointer;
@@ -12722,6 +12776,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .switch-slider:before,
+.page-facebook-interest-finder .fp-container .switch-slider:before,
 .page-seo-roi-calculator .fp-container .switch-slider:before {
   position: absolute;
   content: "";
@@ -12735,16 +12790,22 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container input:checked + .switch-slider,
+.page-facebook-interest-finder .fp-container input:checked + .switch-slider,
 .page-seo-roi-calculator .fp-container input:checked + .switch-slider {
   background-color: #ff5254;
 }
 
 .page-ppc-roi-calculator .fp-container input:focus + .switch-slider,
+.page-facebook-interest-finder .fp-container input:focus + .switch-slider,
 .page-seo-roi-calculator .fp-container input:focus + .switch-slider {
   box-shadow: 0 0 1px #ff5254;
 }
 
 .page-ppc-roi-calculator .fp-container input:checked + .switch-slider:before,
+.page-facebook-interest-finder
+  .fp-container
+  input:checked
+  + .switch-slider:before,
 .page-seo-roi-calculator .fp-container input:checked + .switch-slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
@@ -12752,16 +12813,19 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-container .switch-slider.round,
+.page-facebook-interest-finder .fp-container .switch-slider.round,
 .page-seo-roi-calculator .fp-container .switch-slider.round {
   border-radius: 34px;
 }
 
 .page-ppc-roi-calculator .fp-container .switch-slider.round:before,
+.page-facebook-interest-finder .fp-container .switch-slider.round:before,
 .page-seo-roi-calculator .fp-container .switch-slider.round:before {
   border-radius: 50%;
 }
 
 .page-ppc-roi-calculator .fp-dropbtn,
+.page-facebook-interest-finder .fp-dropbtn,
 .page-seo-roi-calculator .fp-dropbtn {
   padding: 5px;
   font-size: 16px;
@@ -12770,24 +12834,29 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-dropbtn .fa,
+.page-facebook-interest-finder .fp-dropbtn .fa,
 .page-seo-roi-calculator .fp-dropbtn .fa {
   font-size: 24px;
 }
 
 .page-ppc-roi-calculator .fp-dropbtn:hover,
 .page-ppc-roi-calculator .fp-dropbtn:focus,
+.page-facebook-interest-finder .fp-dropbtn:hover,
+.page-facebook-interest-finder .fp-dropbtn:focus,
 .page-seo-roi-calculator .fp-dropbtn:hover,
 .page-seo-roi-calculator .fp-dropbtn:focus {
   background-color: #2980b9;
 }
 
 .page-ppc-roi-calculator .fp-dropdown,
+.page-facebook-interest-finder .fp-dropdown,
 .page-seo-roi-calculator .fp-dropdown {
   position: relative;
   display: inline-block;
 }
 
 .page-ppc-roi-calculator .fp-dropdown-content,
+.page-facebook-interest-finder .fp-dropdown-content,
 .page-seo-roi-calculator .fp-dropdown-content {
   display: none;
   position: absolute;
@@ -12798,6 +12867,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .fp-dropdown-content a,
+.page-facebook-interest-finder .fp-dropdown-content a,
 .page-seo-roi-calculator .fp-dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -12806,6 +12876,7 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .seo-cal-based-title,
+.page-facebook-interest-finder .seo-cal-based-title,
 .page-seo-roi-calculator .seo-cal-based-title {
   font-size: 18px;
   font-weight: 700;
@@ -12817,6 +12888,8 @@ section.section-multiform .mform-container {
 
 .page-ppc-roi-calculator .monthly-roi-label,
 .page-ppc-roi-calculator .monthly-roi .badge.badge-primary.badge-pill,
+.page-facebook-interest-finder .monthly-roi-label,
+.page-facebook-interest-finder .monthly-roi .badge.badge-primary.badge-pill,
 .page-seo-roi-calculator .monthly-roi-label,
 .page-seo-roi-calculator .monthly-roi .badge.badge-primary.badge-pill {
   color: #ffffff;
@@ -12827,16 +12900,19 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .monthly-roi-container,
+.page-facebook-interest-finder .monthly-roi-container,
 .page-seo-roi-calculator .monthly-roi-container {
   margin-top: 30px;
 }
 
 .page-ppc-roi-calculator .fp-calculator-footer-text,
+.page-facebook-interest-finder .fp-calculator-footer-text,
 .page-seo-roi-calculator .fp-calculator-footer-text {
   margin-top: 30px;
 }
 
 .page-ppc-roi-calculator .fp-calculator-footer-text p,
+.page-facebook-interest-finder .fp-calculator-footer-text p,
 .page-seo-roi-calculator .fp-calculator-footer-text p {
   color: #666666;
   font-size: 11px;
@@ -12847,26 +12923,45 @@ section.section-multiform .mform-container {
 }
 
 .page-ppc-roi-calculator .border-right,
+.page-facebook-interest-finder .border-right,
 .page-seo-roi-calculator .border-right {
   border-right: 1px solid #f8f8f8 !important;
 }
 
 @media (min-width: 768px) {
   .page-ppc-roi-calculator section.shaded-white,
+  .page-facebook-interest-finder section.shaded-white,
   .page-seo-roi-calculator section.shaded-white {
     padding-top: 0;
   }
   .page-ppc-roi-calculator section.banner p,
+  .page-facebook-interest-finder section.banner p,
   .page-seo-roi-calculator section.banner p {
     font-size: 20px;
     line-height: 24px;
   }
   .page-ppc-roi-calculator #fp-roi-calculator .fp-container.roi-for-section,
+  .page-facebook-interest-finder
+    #fp-roi-calculator
+    .fp-container.roi-for-section,
   .page-seo-roi-calculator #fp-roi-calculator .fp-container.roi-for-section {
     padding: 40px 50px;
     margin-bottom: 50px;
   }
+  .page-ppc-roi-calculator
+    #fp-roi-calculator
+    .fp-container.roi-for-section.facebook-box-shadow,
+  .page-facebook-interest-finder
+    #fp-roi-calculator
+    .fp-container.roi-for-section.facebook-box-shadow,
+  .page-seo-roi-calculator
+    #fp-roi-calculator
+    .fp-container.roi-for-section.facebook-box-shadow {
+    padding: 20px 20px;
+    margin-bottom: 50px;
+  }
   .page-ppc-roi-calculator .fp-title,
+  .page-facebook-interest-finder .fp-title,
   .page-seo-roi-calculator .fp-title {
     font-size: 42px;
     line-height: 52px;
@@ -12875,11 +12970,13 @@ section.section-multiform .mform-container {
     margin-bottom: 50px;
   }
   .page-ppc-roi-calculator .banner .container,
+  .page-facebook-interest-finder .banner .container,
   .page-seo-roi-calculator .banner .container {
     padding-right: 15px;
     padding-left: 15px;
   }
   .page-ppc-roi-calculator footer,
+  .page-facebook-interest-finder footer,
   .page-seo-roi-calculator footer {
     margin-top: 70px;
   }
@@ -12887,65 +12984,82 @@ section.section-multiform .mform-container {
 
 @media (min-width: 992px) {
   .page-ppc-roi-calculator .fp-logo,
+  .page-facebook-interest-finder .fp-logo,
   .page-seo-roi-calculator .fp-logo {
     margin-top: 30px;
   }
   .page-ppc-roi-calculator .seo-roi-calculator,
   .page-ppc-roi-calculator .ppc-roi-calculator,
+  .page-facebook-interest-finder .seo-roi-calculator,
+  .page-facebook-interest-finder .ppc-roi-calculator,
   .page-seo-roi-calculator .seo-roi-calculator,
   .page-seo-roi-calculator .ppc-roi-calculator {
     margin-top: -300px;
   }
   .page-ppc-roi-calculator #fp-roi-calculator .fp-container.roi-for-section,
+  .page-facebook-interest-finder
+    #fp-roi-calculator
+    .fp-container.roi-for-section,
   .page-seo-roi-calculator #fp-roi-calculator .fp-container.roi-for-section {
     background: #fcfcfc;
   }
   .page-ppc-roi-calculator .fp-container .list-group,
+  .page-facebook-interest-finder .fp-container .list-group,
   .page-seo-roi-calculator .fp-container .list-group {
     padding: 0 20px;
     margin-bottom: 10px;
   }
   .page-ppc-roi-calculator .fp-border-radius-right,
+  .page-facebook-interest-finder .fp-border-radius-right,
   .page-seo-roi-calculator .fp-border-radius-right {
     border-radius: 0 10px 10px 2px;
   }
   .page-ppc-roi-calculator .fp-border-radius-left,
+  .page-facebook-interest-finder .fp-border-radius-left,
   .page-seo-roi-calculator .fp-border-radius-left {
     border-radius: 10px 0 0 10px;
   }
   .page-ppc-roi-calculator .shaded-white,
+  .page-facebook-interest-finder .shaded-white,
   .page-seo-roi-calculator .shaded-white {
     background-color: #f6f6f6;
   }
   .page-ppc-roi-calculator .fp-vertical-align:not(:first-of-type),
+  .page-facebook-interest-finder .fp-vertical-align:not(:first-of-type),
   .page-seo-roi-calculator .fp-vertical-align:not(:first-of-type) {
     border-top: 2px solid #f3f3f3;
   }
   .page-ppc-roi-calculator section.section-services .row .col-12,
+  .page-facebook-interest-finder section.section-services .row .col-12,
   .page-seo-roi-calculator section.section-services .row .col-12 {
     margin-bottom: 30px;
   }
   .page-ppc-roi-calculator section.banner,
+  .page-facebook-interest-finder section.banner,
   .page-seo-roi-calculator section.banner {
     padding-bottom: 380px;
   }
   .page-ppc-roi-calculator section.banner .container .row,
+  .page-facebook-interest-finder section.banner .container .row,
   .page-seo-roi-calculator section.banner .container .row {
     position: relative;
   }
   .page-ppc-roi-calculator section.banner .container .row .col-lg-7,
+  .page-facebook-interest-finder section.banner .container .row .col-lg-7,
   .page-seo-roi-calculator section.banner .container .row .col-lg-7 {
     -ms-flex: 0 0 60%;
     flex: 0 0 60%;
     max-width: 60%;
   }
   .page-ppc-roi-calculator section.banner .container .row .col-lg-5,
+  .page-facebook-interest-finder section.banner .container .row .col-lg-5,
   .page-seo-roi-calculator section.banner .container .row .col-lg-5 {
     -ms-flex: 0 0 40%;
     flex: 0 0 40%;
     max-width: 40%;
   }
   .page-ppc-roi-calculator section.banner .container .row img,
+  .page-facebook-interest-finder section.banner .container .row img,
   .page-seo-roi-calculator section.banner .container .row img {
     position: absolute;
     right: -50px;
@@ -12953,6 +13067,7 @@ section.section-multiform .mform-container {
     margin-top: 0;
   }
   .page-ppc-roi-calculator section.banner h1,
+  .page-facebook-interest-finder section.banner h1,
   .page-seo-roi-calculator section.banner h1 {
     font-size: 75px;
     line-height: 80px;
@@ -12963,6 +13078,7 @@ section.section-multiform .mform-container {
 
 @media (min-width: 1200px) {
   .page-ppc-roi-calculator section.banner h1,
+  .page-facebook-interest-finder section.banner h1,
   .page-seo-roi-calculator section.banner h1 {
     margin-top: 50px;
     white-space: nowrap;
@@ -12971,6 +13087,7 @@ section.section-multiform .mform-container {
 
 @media (max-width: 767px) {
   .page-ppc-roi-calculator .fp-vertical-align,
+  .page-facebook-interest-finder .fp-vertical-align,
   .page-seo-roi-calculator .fp-vertical-align {
     padding: 0 0 20px;
   }
