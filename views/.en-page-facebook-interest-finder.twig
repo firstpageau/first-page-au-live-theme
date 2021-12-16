@@ -1,0 +1,454 @@
+{% extends "en-base.twig" %}
+{% block content %}
+
+	<style>
+		@media(min-width: 992px) {
+			.page-facebook-interest-finder section.banner h1 {
+				font-size: 52px;
+				line-height: 54px;
+			}
+		}
+		tbody tr {
+			background: #e2edff;
+		}
+		.table-striped tbody tr:nth-of-type(odd) {
+			background: #f8faff !important;
+		}
+		.table th {
+			border-top: none !important;
+			border-bottom: none !important;
+			color: #666666;
+			height: 44px;
+		}
+		.table td {
+			border-top: none !important;
+			height: 44px;
+			color: #00225D;
+		}
+		@media(max-width: 768px) {
+			.table td {
+				width: 200px;
+			}
+		}
+		td a {
+			color: #ff5254 !important;
+		}
+		td a:hover {
+			cursor: pointer;
+		}
+		@media(min-width: 768px) {
+			.fp-btn {
+				padding: 15px 30px !important;
+			}
+		}
+		.keyword-form {
+			font-weight: 700 !important;
+			font-size: 22px !important;
+		}
+		@media(max-width: 576px) {
+			.btn-width {
+				width: 100%;
+			}
+		}
+		.breadcrumb {
+			background-color: #ffffff !important;
+			padding: 0 !important;
+			margin-bottom: 0 !important;
+		}
+		#keyword-history {
+			display: contents;
+		}
+		#keyword-history li {
+			color: #2b7bfa;
+			font-weight: 700;
+			font-size: 18px;
+			background: #E3EEFF;
+			padding: 10px 15px;
+			border-radius: 25px !important;
+			margin-right: 10px;
+		}
+		#keyword-history li .closeButton {
+			cursor: pointer;
+			font-size: 11px;
+			margin-left: 8px;
+		}
+		@media(min-width: 992px) {
+			.page-facebook-interest-finder .seo-roi-calculator {
+				margin-top: -250px !important;
+				width: 1080px;
+			}
+			.page-facebook-interest-finder section.banner {
+				padding-bottom: 300px !important;
+			}
+		}
+		@media(min-width: 768px) {
+			.page-facebook-interest-finder #fp-roi-calculator .fp-container.roi-for-section.facebook-box-shadow {
+				padding: 20px !important;
+			}
+		}
+		@media(max-width: 767px) {
+			.page-facebook-interest-finder section.banner .container .row img {
+				max-width: 250px !important;
+			}
+		}
+		.pointer-none {
+			pointer-events: none;
+		}
+		.blue-bubble {
+			margin: 5px 0;
+		}
+		.blue-bubble a {
+			color: #2b7bfa;
+		}
+		#search-form-submit {
+			margin-left: 10px;
+		}
+		@media(max-width: 575px) {
+			#search-form-submit {
+				margin-left: 0;
+			}
+		}
+		.search-wrapper {
+			padding: 10px;
+			border: 1px solid #e0e0e0;
+			align-items: center;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+		.description-section {
+			position: relative;
+			z-index: 2;
+		}
+
+		.result_section {
+			margin-left: 40px;
+			font-size: 20px;
+			font-weight: 700;
+			color: #B3B4B5;
+			background: #E9EBEF;
+			padding: 5px 15px;
+			border-radius: 50px;
+		}
+		@media(max-width: 575px) {
+			.result_section {
+				margin-left: 0;
+				display: inline-block;
+			}
+		}
+		@media(min-width: 768px) {
+			.w-200 {
+				width: 200px;
+			}
+		}
+		@media(max-width: 767px) {
+			#fp-roi-calculator .facebook-box-shadow {
+				box-shadow: none !important;
+			}
+		}
+	</style>
+
+	<section class="banner">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-7 col-lg-7 description-section">
+					<h1>Facebook Hidden ad
+						<br class="d-lg-block">
+						Interest Finder</h1>
+					<p>Use this Facebook™ interest targeting tool to create hyper-focused advertising based on people's interests. This tool is used by our internal marketing team, but now we have made it public and 100% FREE.</p>
+					<p>Facebook™ only shows you 25 interest suggestions when you are creating your campaigns so this an awesome way to find thousands of targetable but hidden Facebook™ interests so you can save time, save money and find the perfect niche interests you're looking for.</p>
+				</div>
+				<div class="col-12 col-md-5 col-lg-5 text-center d-none d-md-block">
+					<img src="{{ site.theme.link }}/assets/seo-calculator/facebook-interest-finder-banner.png" class="img-fluid" alt="Facebook Hidden ad Interest Finder"/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-white shaded-white" style="background:white">
+		<div class="d-sm-flex justify-content-center" id='fp-roi-calculator' data-currency='$'>
+			<div class="seo-roi-calculator">
+				<div class="container fp-container roi-for-section facebook-box-shadow" style="background-color:#ffffff">
+					<div class="row mx-0">
+						<div class="col-12 col-lg-12">
+							<form id="search-form" class="field has-addons">
+								<p class="control d-none mb-0">
+									<span class="select">
+										<select id="locale">
+											<option value="en_US">English</option>
+											<option value="th_TH">Thai</option>
+											<option value="vi_VN">Vietnamese</option>
+										</select>
+									</span>
+								</p>
+								<div class="d-sm-flex search-wrapper">
+									<nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+										<div id="keyword-history"></div>
+									</nav>
+									<p class="control is-expanded mb-0" style="width:100%">
+										<input id="keyword" class="input form-control keyword-form" type="text" onload="this.value=''" placeholder="Enter your keyword"/>
+
+									</p>
+									<p class="control mb-0">
+										<a id="search-form-submit" class="btn fp-btn fp-btn-orange button is-primary btn-width ">
+											Get
+										</a>
+									</p>
+								</div>
+							</form>
+							<p id="desc" style="color:#ff5254" class="d-none">Please add a keyword</p>
+						</div>
+
+						<div class="col-12 col-lg-6">
+							<div class="row fp-vertical-align fp-show-block no-gutters" id="fp-total-search-volume">
+								<div class="col-12 col-md-12">
+									<div class="d-sm-flex d-inline-block align-items-baseline">
+										<h4 class="subtitle has-text-centered">
+											Ad Interests
+										</h4>
+										<div id="interest-result-section" class="result_section d-none">
+											<span id="interest-counter"></span>
+										</div>
+									</div>
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<thead>
+												<th class="d-none d-md-block">ID</th>
+												<th class="w-200">Name</th>
+												<th>Audience size</th>
+											</thead>
+											<tbody id="interest-table-body">
+												{% if 'id="interest-counter"' == 0 %}
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+												{% endif %}
+											</tbody>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="row fp-vertical-align fp-show-block no-gutters" id="fp-total-search-volume">
+							<div class="col-12 col-md-12">
+								<div class="d-sm-flex d-inline-block align-items-baseline">
+									<h4 class="subtitle has-text-centered">
+										Ad Interest Suggestions
+									</h4>
+									<div id="suggestion-result-section" class="result_section d-none">
+										<span id="suggestion-counter"></span>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-striped">
+										<thead>
+											<th class="d-none d-md-block">ID</th>
+											<th class="w-200">Name</th>
+											<th>Audience size</th>
+										</thead>
+										<tbody id="suggestion-table-body">
+											{% if 'id="suggestion-counter"' == 0 %}
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+												</tr>
+											{% endif %}
+										</tbody>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div></section><section class="section-paragraph">
+<div class="container">
+	<div class="row align-items-center flex-lg-row flex-md-row-reverse no-gutters">
+		<div class="col-12 col-lg-6 text-center">
+			<img src="{{ site.theme.link }}/assets/img/facebook-interest-finder-content-image.png" srcset="{{ site.theme.link }}/assets/img/facebook-interest-finder-content-image.png, {{ site.theme.link }}/assets/img/facebook-interest-finder-content-image.png 2x" class="img-fluid d-none d-md-inline-block" alt="First Page"/>
+			<img src="{{ site.theme.link }}/assets/img/facebook-interest-finder-content-image.png" srcset="{{ site.theme.link }}/assets/img/facebook-interest-finder-content-image.png, {{ site.theme.link }}/assets/img/facebook-interest-finder-content-image.png 2x" class="img-fluid d-md-none" alt="First Page"/>
+		</div>
+		<div class="col-12 col-lg-6 text-container facebook-finder-content">
+			<p>If you target your strategy using Facebook Ads Manager, only 25 interests are automatically suggested when entering terms. However, we know this is only a fraction of the interests available for targeting on the platform.</p>
+
+			<p>This insightful tool identifies thousands of targetable but hidden Facebook interests, helping your brand optimise its campaign for the best ROI. While our marketing specialists use this tool to deliver massive profit for our clients, we’re providing this resource 100% free to the public.</p>
+
+			<p>Rather than targeting the same interests as every other brand on Facebook, use this exceptional tool to increase your advertising campaign’s performance and surpass your goals.</p>
+
+		</div>
+	</div>
+</div></section><section class="section-client-reviews pb-3">
+<div class="container">
+	<div class="section-title">
+		<h2>To learn how your business can benefit from this
+			<br class="d-none d-lg-block">
+			unique Facebook tool, just ask our team.</h2>
+	</div>
+	<div class="container mt-5 mb-5 text-center">
+		<a href="/contact" class="btn fp-btn fp-btn-orange">CONTACT US NOW</a>
+	</div>
+</div></section><script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script><script>
+let submitForm = (e) => {
+e.preventDefault();
+i = 0;
+let keyword = document.getElementById("keyword").value.trim();
+submitKeyword(keyword);
+};
+
+let submitKeyword = (keyword) => {
+dataLayer.push({event: "fbt-submit-keyword", keyword: keyword});
+
+const apiPath = "/fb-interest-finder-page/backend.php";
+
+document.getElementById("keyword").value = keyword;
+
+if ((keyword.length == 0)) {
+document.getElementById("desc").classList.remove('d-none');
+$('#interest-counter').text("No results");
+$('#suggestion-counter').text("No results");
+document.getElementById("suggestion-result-section").classList.remove('d-none');
+document.getElementById("interest-result-section").classList.remove('d-none');
+return false;
+} else { // add to title and history
+setTitle(keyword);
+document.getElementById("suggestion-result-section").classList.remove('d-none');
+document.getElementById("interest-result-section").classList.remove('d-none');
+document.getElementById("desc").classList.add('d-none');
+
+// document.getElementById("keyword-history").innerHTML += `<li class="blue-bubble"><a class="pointer-none" onclick="submitKeyword('${keyword}')">${keyword}</a><span class="closeButton">X</span></li>`;
+document.getElementById("keyword-history").innerHTML += `<li class="blue-bubble"><a class="pointer-none" onclick="submitKeyword('${keyword}')">${keyword}</a></li>`;
+$(".result_section").css("background", "#E3EEFF");
+$(".result_section").css("color", "#00225d");
+}
+
+// Use live to bind click event to each li and remove it
+$('.closeButton').live('click', function () {
+$(this).parent().remove();
+});
+
+document.getElementById("keyword").value = '';
+
+let locale = document.getElementById("locale").value;
+
+// get interests
+axios.get(apiPath, {
+params: {
+type: "adinterest",
+kw: keyword,
+locale
+}
+}).then((a) => showAudiences(a.data.data, "interest"));
+
+// get suggestions
+axios.get(apiPath, {
+params: {
+type: "adinterestsuggestion",
+kw: keyword,
+locale
+}
+}).then((a) => showAudiences(a.data.data, "suggestion"));
+};
+
+let i = 0;
+
+let showAudiences = (audiences, table_id) => {
+let table = document.getElementById(table_id + "-table-body");
+let counter = document.getElementById(table_id + "-counter");
+let desc = document.getElementById("desc");
+
+if (audiences.length == 0) {
+i++;
+counter.innerText = " No results";
+if (i == 2) {
+desc.classList.remove('d-none');
+}
+} else {
+desc.classList.add('d-none');
+counter.innerText = " " + audiences.length + "";
+} table.innerHTML = "";
+
+audiences.forEach((audience) => {
+let row = document.createElement("tr");
+
+row.innerHTML = `<td class="d-none d-md-block">${
+audience.id
+}</td><td><a onclick="submitKeyword('${
+audience.name
+}')">${
+audience.name
+}</a></td><td>${
+audience.audience_size
+}</td>`;
+
+table.appendChild(row);
+});
+};
+
+let setTitle = (title) => {
+document.title = title.length > 0 ? title + " - Hidden Ad Interest Finder | First Page" : "Hidden Ad Interest Finder | First Page";
+};
+
+let goToKeyword = (e) => {
+e.preventDefault();
+console.log(e);
+submitKeyword(e.target.text);
+};
+
+document.getElementById("search-form").onsubmit = submitForm;
+document.getElementById("search-form-submit").onclick = submitForm;</script>{% endblock %}
