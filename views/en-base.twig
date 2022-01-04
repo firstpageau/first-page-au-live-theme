@@ -23,12 +23,11 @@
 				<meta property="og:image" content="{{ site.theme.link }}/assets/img/meta-img.png"/>
 			{% endif %}
 
-			<meta
-			name="facebook-domain-verification" content="iivsg55d4oxquyq9s1ep75gnk08nxf"/>
+			<meta name="facebook-domain-verification" content="iivsg55d4oxquyq9s1ep75gnk08nxf"/>
 
 			<!-- Core CSS -->
-			<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/bootstrap.min.css">
-			<link rel="stylesheet" href="{{ site.theme.link }}/assets/css/font-awesome.min.css">
+			{# <link rel="stylesheet" href="{{ site.theme.link }}/assets/css/bootstrap.min.css"> #}
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <link rel="stylesheet" href="{{ site.theme.link }}/assets/css/font-awesome.min.css">
 			<link rel="stylesheet" href="https://use.typekit.net/wqq0bzd.css">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
 			<link rel="stylesheet" href="https://unpkg.com/tippy.js@2.1.1/dist/tippy.css"/>
@@ -88,46 +87,12 @@ j.src = 'https://ss.firstpage.com.au/ppwusccf.js?id=' + i + dl;
 f.parentNode.insertBefore(j, f);
 })(window, document, 'script', 'dataLayer', 'GTM-W2TC9NP');
 			</script>
-			<!-- End Google Tag Manager -->
-
-			{# <!-- Facebook Pixel Code -->
-															<script>
-																!function (f, b, e, v, n, t, s) {
-												if (f.fbq) 
-												return;
-												
-												n = f.fbq = function () {
-												n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-												};
-												if (! f._fbq) 
-												f._fbq = n;
-												
-												n.push = n;
-												n.loaded = !0;
-												n.version = '2.0';
-												n.queue = [];
-												t = b.createElement(e);
-												t.async = !0;
-												t.src = v;
-												s = b.getElementsByTagName(e)[0];
-												s.parentNode.insertBefore(t, s)
-												}(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-												fbq('init', '209704970774476');
-												fbq('track', 'PageView');
-															</script>
-															<noscript>
-																<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=209704970774476&ev=PageView&noscript=1"/>
-															</noscript>
-															<!-- End Facebook Pixel Code --> #}
-
-			{# Frase AI Bot Chat #}
-			{# <script id="frase-script" data-hash="84f865759bcf4999b7b86790a0b8fa3f" src="https://app.frase.io/js/libraries/bot.js"></script> #}
-			{# End Frase AI Bot Chat #}
 
 			{{ function('wp_head') }}
 
-				{% if sumome %}
-					<script async> (function (s, u, m, o, j, v) {
+			{% if sumome %}
+				<script async>
+					(function (s, u, m, o, j, v) {
 j = u.createElement(m);
 v = u.getElementsByTagName(m)[0];
 j.async = 1;
@@ -196,9 +161,9 @@ v.parentNode.insertBefore(j, v)
 								</li>
 								<li class="nav-item nav-item-main dropdown">
 									<p class="nav-link dropdown-toggle mb-0 d-lg-none" data-toggle="dropdown">GOOGLE
-																																																																																																		ADS</p>
+																																																																																																																																																				ADS</p>
 									<a class="nav-link dropdown-toggle d-none d-lg-block" href="{{ home_url }}google-ads/">GOOGLE
-																																																																																																		ADS</a>
+																																																																																																																																																				ADS</a>
 									<div class="dropdown-menu">
 										<div class="dropdown-cont">
 											<a class="dropdown-item" href="{{ home_url }}google-ads/">Google Ads</a>
@@ -222,9 +187,9 @@ v.parentNode.insertBefore(j, v)
 								</li>
 								<li class="nav-item nav-item-main dropdown">
 									<p class="nav-link dropdown-toggle mb-0 d-lg-none" data-toggle="dropdown">OTHER
-																																																																																																		SERVICES</p>
+																																																																																																																																																				SERVICES</p>
 									<a class="nav-link dropdown-toggle d-none d-lg-block" href="{{ home_url }}programmatic-advertising/">OTHER
-																																																																																																		SERVICES</a>
+																																																																																																																																																				SERVICES</a>
 									<div class="dropdown-menu">
 										<div class="dropdown-cont">
 											<a class="dropdown-item" href="{{ home_url }}programmatic-advertising/">Programmatic Advertising</a>
@@ -238,7 +203,7 @@ v.parentNode.insertBefore(j, v)
 
 								<li class="nav-item nav-item-main seo-dropdown dropdown">
 									<p class="nav-link dropdown-toggle mb-0 d-lg-none" data-toggle="dropdown">FREE
-																																																																																																		TOOLS</p>
+																																																																																																																																																				TOOLS</p>
 									<a class="nav-link dropdown-toggle d-none d-lg-block" href="{{ home_url }}seo-audit/">FREE TOOLS</a>
 									<div class="dropdown-menu" aria-labelledby="ddAudits">
 										<div class="dropdown-cont">
@@ -253,7 +218,7 @@ v.parentNode.insertBefore(j, v)
 								</li>
 								<li class="nav-item nav-item-main dropdown">
 									<p class="nav-link dropdown-toggle mb-0 d-lg-none" data-toggle="dropdown">About
-																																																																																																		Us</p>
+																																																																																																																																																				Us</p>
 									<a class="nav-link dropdown-toggle d-none d-lg-block" href="{{ home_url }}who-we-are/">About Us</a>
 									<div class="dropdown-menu">
 										<div class="dropdown-cont">
@@ -303,7 +268,7 @@ v.parentNode.insertBefore(j, v)
 											<a href="{{ home_url }}google-ads/">Google Ads</a>
 										</li>
 										{# <li><a href="{{ home_url }}facebook-advertising/">Facebook Ads</a></li>
-																																																																																										                                <li><a href="{{ home_url }}reputation-management/">Reputation Repair</a></li> #}
+																																																																																																																																												                                <li><a href="{{ home_url }}reputation-management/">Reputation Repair</a></li> #}
 										<li>
 											<a href="{{ home_url }}facebook-advertising/">Social</a>
 										</li>
@@ -344,7 +309,7 @@ v.parentNode.insertBefore(j, v)
 
 							<p class="mt-4 footer__contactDetail">
 								<strong>First Page</strong><br/><a href="https://www.google.com/maps/place/First+Page+-+%231+%F0%9F%8F%85Digital+Marketing+%26+SEO+Agency/@-37.8285184,144.997028,15z/data=!4m5!3m4!1s0x0:0xd19eee9ef63d8720!8m2!3d-37.8285485!4d144.99728" title="The SEO Agency Melbourne - Lv 6, 534 Church Street,
-																																																																																	Cremorne Melbourne VIC 3121">{{ site_address }}</a>
+																																																																																																																														Cremorne Melbourne VIC 3121">{{ site_address }}</a>
 							</p>
 							<p>
 								<strong>Call</strong><br/>
@@ -476,7 +441,7 @@ v.parentNode.insertBefore(j, v)
 									<a href="{{ home_url }}google-ads/">Google Ads</a>
 								</li>
 								{# <li><a href="{{ home_url }}facebook-advertising/">Facebook Ads</a></li>
-																																																																								                    <li><a href="{{ home_url }}reputation-management/">Reputation Repair</a></li> #}
+																																																																																																																                    <li><a href="{{ home_url }}reputation-management/">Reputation Repair</a></li> #}
 								<li>
 									<a href="{{ home_url }}facebook-advertising/">Social</a>
 								</li>
@@ -522,7 +487,7 @@ v.parentNode.insertBefore(j, v)
 
 							<p class="mt-4">
 								<strong>First Page</strong><br/><a href="https://www.google.com/maps/place/First+Page+-+%231+%F0%9F%8F%85Digital+Marketing+%26+SEO+Agency/@-37.8285184,144.997028,15z/data=!4m5!3m4!1s0x0:0xd19eee9ef63d8720!8m2!3d-37.8285485!4d144.99728" title="The SEO Agency Melbourne - Lv 6, 534 Church Street,
-																																																																																	Richmond Melbourne VIC 3121">{{ site_address }}</a>
+																																																																																																																														Richmond Melbourne VIC 3121">{{ site_address }}</a>
 							</p>
 							<p>
 								<strong>Call</strong><br/>
