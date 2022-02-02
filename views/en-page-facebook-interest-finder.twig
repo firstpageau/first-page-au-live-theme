@@ -433,15 +433,12 @@ counter.innerText = " " + audiences.length + "";
 audiences.forEach((audience) => {
 let row = document.createElement("tr");
 
-row.innerHTML = `<td class="d-none d-md-block">${
-audience.id
-}</td><td><a onclick="submitKeyword('${
-audience.name
-}')">${
-audience.name
-}</a></td><td>${
-audience.audience_size
-}</td>`;
+if(audience.audience_size_upper_bound != null){
+    row.innerHTML = `<td class="d-none d-md-block">${audience.id}</td><td><a onclick="submitKeyword('${audience.name}')">${audience.name}</a></td><td>${audience.audience_size_upper_bound}</td>`;
+}
+else{
+    row.innerHTML = `<td class="d-none d-md-block">${audience.id}</td><td><a onclick="submitKeyword('${audience.name}')">${audience.name}</a></td><td>${audience.audience_size}</td>`;
+}
 
 table.appendChild(row);
 });
